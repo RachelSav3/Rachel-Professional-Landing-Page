@@ -1,0 +1,1406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020a18">
+  <meta name="description" content="Rachel Savage, Head of Operations at Snap Ireland. Bringing people, operations and business together to solve problems, empower teams and make everyday work better.">
+  <title>Rachel Savage | Head of Operations</title>
+
+  <meta property="og:title" content="Rachel Savage | Head of Operations">
+  <meta property="og:description" content="Bringing people, operations and business together to solve problems, empower teams and make everyday work better.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://www.linkedin.com/in/rachel-savage-7836bab7/">
+  <!-- Add og:image later: 1200x630 PNG matching dark theme -->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rachel Savage | Head of Operations">
+  <meta name="twitter:description" content="People. Operations. Business. Making everyday work better.">
+  <meta name="twitter:url" content="https://www.linkedin.com/in/rachel-savage-7836bab7/">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E%F0%9F%8C%9F%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem("rachel-theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light");
+        }
+      } catch (error) {
+        // Storage may be unavailable when opened locally.
+      }
+    })();
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #020a18;
+      --bg-grad: linear-gradient(170deg, #020a18 0%, #041028 40%, #06142e 70%, #020a18 100%);
+      --surface: rgba(8,24,56,0.85);
+      --border: rgba(0,170,255,0.12);
+      --border-glow: rgba(0,170,255,0.3);
+      --text: #d0e0f0;
+      --text-bright: #e8f0ff;
+      --text-dim: #6888aa;
+      --neon: #00aaff;
+      --cyan: #00e5ff;
+      --green: #00ff88;
+      --amber: #ffaa00;
+      --red: #ff4466;
+      --purple: #aa66ff;
+      --header-bg: rgba(2,10,24,0.78);
+      --card-inner: rgba(255,255,255,0.025);
+      --grid-color: rgba(100,180,255,0.03);
+      --orb-opacity: 0.08;
+      --button-text: #020a18;
+      --shadow: 0 15px 50px rgba(0,0,0,0.16);
+      --track: rgba(255,255,255,0.07);
+    }
+
+    html.light {
+      color-scheme: light;
+      --bg: #edf3fa;
+      --bg-grad: linear-gradient(170deg, #f5f8fd 0%, #e9f1fa 40%, #e2edf9 70%, #f5f8fd 100%);
+      --surface: rgba(255,255,255,0.92);
+      --border: rgba(22,82,148,0.15);
+      --border-glow: rgba(0,105,200,0.3);
+      --text: #344a65;
+      --text-bright: #10233e;
+      --text-dim: #60748d;
+      --neon: #006cc5;
+      --cyan: #007f9f;
+      --green: #087e57;
+      --amber: #a56300;
+      --red: #c72d51;
+      --purple: #7145c1;
+      --header-bg: rgba(245,249,254,0.86);
+      --card-inner: rgba(225,237,249,0.42);
+      --grid-color: rgba(20,80,150,0.045);
+      --orb-opacity: 0.06;
+      --button-text: #ffffff;
+      --shadow: 0 12px 36px rgba(29,63,110,0.07);
+      --track: rgba(20,80,150,0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: color 0.3s, background 0.3s;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    a {
+      color: var(--neon);
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 14px var(--border-glow);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    ::selection {
+      background: var(--neon);
+      color: #fff;
+    }
+
+    /* BACKGROUND DEPTH */
+
+    .background {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background: var(--bg-grad);
+      pointer-events: none;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .orbs {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .orb {
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: var(--orb-opacity);
+      animation: orbit 22s ease-in-out infinite alternate;
+    }
+
+    .orb.one {
+      top: 5%;
+      left: -350px;
+      background: var(--neon);
+    }
+
+    .orb.two {
+      top: 45%;
+      right: -350px;
+      background: var(--purple);
+      animation-delay: -8s;
+    }
+
+    .orb.three {
+      bottom: -180px;
+      left: -350px;
+      background: var(--cyan);
+      animation-delay: -13s;
+    }
+
+    @keyframes orbit {
+      0% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(35px,-45px) scale(1.15); }
+      100% { transform: translate(-15px,45px) scale(0.95); }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-bright);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--neon), var(--purple));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 0 22px var(--border-glow);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-bright);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .icon-button:hover {
+      border-color: var(--border-glow);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .icon-button svg {
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .moon-icon { display: none; }
+    html.light .moon-icon { display: block; }
+    html.light .sun-icon { display: none; }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 88px;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--border-glow);
+      background: var(--surface);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 28px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 10vw, 100px);
+      line-height: 1.02;
+      letter-spacing: -0.075em;
+      margin: 0 0 20px;
+      font-weight: 900;
+      color: var(--text-bright);
+    }
+
+    .hero h1 span {
+      background: linear-gradient(100deg, var(--neon), var(--cyan), var(--purple));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .role {
+      font-size: clamp(16px, 2.6vw, 21px);
+      font-weight: 700;
+      color: var(--neon);
+      letter-spacing: -0.4px;
+      margin: 0 0 30px;
+    }
+
+    .hero-statement {
+      max-width: 750px;
+      font-size: clamp(25px, 4vw, 40px);
+      line-height: 1.34;
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      color: var(--text-bright);
+      margin: 0 0 26px;
+    }
+
+    .hero-statement em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+
+    .hero-description {
+      max-width: 640px;
+      color: var(--text-dim);
+      font-size: 16px;
+      margin: 0 0 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 51px;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: var(--button-text);
+      background: linear-gradient(120deg, var(--neon), var(--cyan));
+      border: 1px solid transparent;
+      box-shadow: 0 5px 26px var(--border-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      color: var(--button-text);
+      box-shadow: 0 10px 35px var(--border-glow);
+      text-shadow: none;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border-glow);
+      background: var(--surface);
+      color: var(--text-bright);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* QUICK PROFILE */
+
+    .profile-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--border);
+      background: var(--border);
+      border-radius: 17px;
+      overflow: hidden;
+      margin-bottom: 85px;
+    }
+
+    .profile-stat {
+      background: var(--surface);
+      padding: 23px 20px;
+    }
+
+    .profile-stat strong {
+      display: block;
+      color: var(--text-bright);
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.4;
+      margin-bottom: 7px;
+    }
+
+    .profile-stat small {
+      display: block;
+      color: var(--text-dim);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 700;
+    }
+
+    /* SECTIONS */
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-kicker {
+      color: var(--neon);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(27px, 4vw, 37px);
+      color: var(--text-bright);
+      letter-spacing: -1.5px;
+      line-height: 1.25;
+    }
+
+    .section-heading p {
+      color: var(--text-dim);
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 90px;
+    }
+
+    .accordion {
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: border-color 0.3s;
+    }
+
+    .accordion:hover {
+      border-color: var(--border-glow);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      padding: 23px 25px;
+      background: transparent;
+      border: 0;
+      color: var(--text-bright);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .number {
+      width: 39px;
+      height: 39px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-glow);
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--cyan);
+      background: var(--card-inner);
+    }
+
+    .accordion-title {
+      flex: 1;
+      font-size: clamp(16px, 2.5vw, 20px);
+      font-weight: 750;
+      letter-spacing: -0.5px;
+    }
+
+    .toggle-symbol {
+      color: var(--neon);
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1;
+      width: 24px;
+      text-align: center;
+    }
+
+    .accordion-body {
+      display: grid;
+      grid-template-rows: 1fr;
+      transition: grid-template-rows 0.35s ease;
+    }
+
+    .accordion.closed .accordion-body {
+      grid-template-rows: 0fr;
+    }
+
+    .accordion-inner {
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .accordion-content {
+      padding: 0 25px 27px 81px;
+    }
+
+    .accordion-content p {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.85;
+      margin: 0 0 17px;
+    }
+
+    .accordion-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: var(--text-bright);
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 7px 12px;
+      border-radius: 7px;
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    /* CAREER TIMELINE */
+
+    .timeline {
+      position: relative;
+      padding-left: 27px;
+      margin: 6px 0 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      bottom: 14px;
+      width: 1px;
+      background: linear-gradient(var(--neon), var(--purple), var(--border));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 25px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -26px;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--neon);
+      box-sizing: border-box;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 15px;
+      color: var(--text-bright);
+      font-weight: 750;
+    }
+
+    .timeline-item .company {
+      color: var(--neon);
+      font-size: 12px;
+      font-weight: 700;
+      margin: 4px 0;
+    }
+
+    .timeline-item .date {
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      margin: 7px 0 0;
+    }
+
+    .career-progress {
+      margin: 15px 0 25px;
+      padding: 17px;
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .career-progress .mini-label {
+      display: block;
+      color: var(--text-dim);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .progress-track {
+      height: 5px;
+      background: var(--track);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .progress-fill {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--neon), var(--cyan), var(--purple));
+      border-radius: 10px;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--text-dim);
+      font-size: 10px;
+      font-weight: 650;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 15px 0 20px;
+    }
+
+    .skill-card {
+      border: 1px solid var(--border);
+      background: var(--card-inner);
+      border-radius: 12px;
+      padding: 17px;
+    }
+
+    .skill-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .skill-card h3 {
+      font-size: 13px;
+      color: var(--text-bright);
+      margin: 0 0 7px;
+    }
+
+    .skill-card p {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* EDUCATION */
+
+    .education-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:last-child {
+      border-bottom: 0;
+    }
+
+    .edu-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .education-item h3 {
+      font-size: 14px;
+      color: var(--text-bright);
+      margin: 0 0 4px;
+    }
+
+    .education-item .institution {
+      color: var(--neon);
+      font-size: 12px;
+      font-weight: 650;
+      margin-bottom: 3px;
+    }
+
+    .education-item .date {
+      color: var(--text-dim);
+      font-size: 11px;
+    }
+
+    /* APPROACH */
+
+    .quote {
+      border-left: 3px solid var(--neon);
+      padding: 12px 0 12px 20px;
+      margin: 18px 0 25px;
+      color: var(--text-bright);
+      font-size: clamp(17px, 3vw, 22px);
+      line-height: 1.55;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .value {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-bright);
+      padding: 9px 12px;
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    .value span {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    /* CLOSING */
+
+    .closing {
+      text-align: center;
+      padding: 55px 25px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 80px;
+    }
+
+    .closing::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    }
+
+    .closing h2 {
+      color: var(--text-bright);
+      font-size: clamp(27px, 5vw, 40px);
+      letter-spacing: -1.5px;
+      line-height: 1.25;
+      margin: 0 0 14px;
+    }
+
+    .closing p {
+      max-width: 520px;
+      margin: 0 auto 27px;
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 27px 0 35px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .header-inner { min-height: 65px; }
+
+      .hero {
+        padding: 72px 0 62px;
+      }
+
+      .hero h1 {
+        font-size: clamp(49px, 12vw, 75px);
+      }
+
+      .hero-statement {
+        letter-spacing: -0.8px;
+      }
+
+      .profile-strip {
+        grid-template-columns: 1fr;
+        margin-bottom: 65px;
+      }
+
+      .profile-stat {
+        padding: 15px 20px;
+      }
+
+      .accordion-trigger {
+        padding: 19px 16px;
+        gap: 12px;
+      }
+
+      .accordion-content {
+        padding: 0 17px 24px 17px;
+      }
+
+      .number {
+        width: 34px;
+        height: 34px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .closing {
+        padding: 45px 18px;
+      }
+
+      .sections {
+        margin-bottom: 65px;
+      }
+
+      .btn {
+        font-size: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orbs" aria-hidden="true">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Rachel Savage, back to top">
+        <span class="brand-mark">RS</span>
+        <span>Rachel Savage<span style="color:var(--neon)">.</span></span>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" title="Toggle light and dark mode" aria-label="Toggle light and dark mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"></path>
+          </svg>
+        </button>
+
+        <button class="icon-button" id="expandToggle" type="button" title="Collapse all sections" aria-label="Collapse all sections">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 10l5-5 5 5M7 14l5 5 5-5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content container" id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow">
+        <span class="status-dot"></span>
+        People · Operations · Business
+      </div>
+
+      <h1 id="hero-title">Rachel<br><span>Savage.</span></h1>
+
+      <p class="role">Head of Operations · Snap Ireland</p>
+
+      <p class="hero-statement">
+        Bringing people, operations and business together to solve problems, empower teams and <em>make everyday work better.</em>
+      </p>
+
+      <p class="hero-description">
+        A people, operations and communication professional with a passion for empowering employees, improving everyday practices and finding practical solutions.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#about">
+          Explore my journey
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/rachel-savage-7836bab7/" target="_blank" rel="noopener noreferrer">
+          Connect on LinkedIn ↗
+        </a>
+      </div>
+    </section>
+
+    <div class="profile-strip" aria-label="Professional overview">
+      <div class="profile-stat">
+        <strong>Head of Operations</strong>
+        <small>Current Role</small>
+      </div>
+      <div class="profile-stat">
+        <strong>Snap Ireland</strong>
+        <small>Organisation</small>
+      </div>
+      <div class="profile-stat">
+        <strong>Dublin, Ireland</strong>
+        <small>Professional Base</small>
+      </div>
+    </div>
+
+    <div class="section-heading" id="about">
+      <div class="section-kicker">The story so far</div>
+      <h2>More than a job title.</h2>
+      <p>A little about what I do, where I've been and what matters to me.</p>
+    </div>
+
+    <div class="sections">
+
+      <!-- SECTION 01 -->
+
+      <section class="accordion" id="section-1">
+        <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-1">
+          <span class="number">01</span>
+          <span class="accordion-title">About Me</span>
+          <span class="toggle-symbol" aria-hidden="true">−</span>
+        </button>
+        <div class="accordion-body" id="panel-1">
+          <div class="accordion-inner">
+            <div class="accordion-content">
+              <p>
+                I'm <span class="highlight">Rachel Savage</span>, Head of Operations at Snap Ireland, with a background in operations, business management, human resources and franchising.
+              </p>
+              <p>
+                I'm a people, operations and communication professional with a passion for empowering employees and facilitating the day-to-day work life.
+              </p>
+              <p>
+                I enjoy the challenge of problem solving and finding solutions to improve everyday practices and policies through effective communication and organisation.
+              </p>
+
+              <div class="tags">
+                <span class="tag">People</span>
+                <span class="tag">Operations</span>
+                <span class="tag">Communication</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 02 -->
+
+      <section class="accordion" id="section-2">
+        <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-2">
+          <span class="number">02</span>
+          <span class="accordion-title">My Career Journey</span>
+          <span class="toggle-symbol" aria-hidden="true">−</span>
+        </button>
+        <div class="accordion-body" id="panel-2">
+          <div class="accordion-inner">
+            <div class="accordion-content">
+              <p>
+                My career has taken me across operations, human resources and business management, with experience in both Ireland and Australia.
+              </p>
+
+              <div class="career-progress">
+                <span class="mini-label">Career progression at Snap Ireland</span>
+                <div class="progress-track">
+                  <div class="progress-fill"></div>
+                </div>
+                <div class="progress-labels">
+                  <span>Administrator</span>
+                  <span>Manager</span>
+                  <span>Head of Operations</span>
+                </div>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <h3>Head of Operations</h3>
+                  <div class="company">Snap Ireland</div>
+                  <div class="date">March 2025 – Present</div>
+                  <p>Leading operations, supporting business practices and working across people, processes and the franchise network.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>Group Operations Manager</h3>
+                  <div class="company">Snap Ireland</div>
+                  <div class="date">October 2023 – March 2025</div>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>Group Operations Administrator</h3>
+                  <div class="company">Snap Ireland</div>
+                  <div class="date">March 2023 – October 2023</div>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>HR Manager</h3>
+                  <div class="company">Corre Energy</div>
+                  <div class="date">June 2021 – March 2023</div>
+                  <p>Business partnering across the employee lifecycle, including onboarding, employee relations, performance management, development and internal communications.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>Executive Officer – HR</h3>
+                  <div class="company">Mental Health Commission Ireland</div>
+                  <div class="date">January 2021 – June 2021</div>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>Operations Team Lead</h3>
+                  <div class="company">Shell · Trident Shipping Australia Pty Ltd</div>
+                  <div class="date">June 2015 – May 2020</div>
+                </div>
+
+                <div class="timeline-item">
+                  <h3>Human Resources Coordinator</h3>
+                  <div class="company">Wanslea Family Services Inc.</div>
+                  <div class="date">May 2015 – July 2015</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03 -->
+
+      <section class="accordion" id="section-3">
+        <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-3">
+          <span class="number">03</span>
+          <span class="accordion-title">What I Do</span>
+          <span class="toggle-symbol" aria-hidden="true">−</span>
+        </button>
+        <div class="accordion-body" id="panel-3">
+          <div class="accordion-inner">
+            <div class="accordion-content">
+              <p>
+                My work brings together the operational and people-focused sides of business, with an emphasis on communication, organisation and practical improvements.
+              </p>
+
+              <div class="skills-grid">
+                <div class="skill-card">
+                  <div class="skill-icon">⚙️</div>
+                  <h3>Operations Management</h3>
+                  <p>Supporting processes, day-to-day operations and business efficiency.</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-icon">🤝</div>
+                  <h3>People & HR</h3>
+                  <p>Employee relations, performance management, development and communication.</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-icon">📈</div>
+                  <h3>Business Improvement</h3>
+                  <p>Identifying challenges and finding practical solutions to improve everyday work.</p>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-icon">🌐</div>
+                  <h3>Franchising & Collaboration</h3>
+                  <p>Working across teams and supporting consistent business practices.</p>
+                </div>
+              </div>
+
+              <div class="tags">
+                <span class="tag">Business Management</span>
+                <span class="tag">B2B</span>
+                <span class="tag">Franchising</span>
+                <span class="tag">Human Resources</span>
+                <span class="tag">Team Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 04 -->
+
+      <section class="accordion" id="section-4">
+        <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-4">
+          <span class="number">04</span>
+          <span class="accordion-title">Education & Development</span>
+          <span class="toggle-symbol" aria-hidden="true">−</span>
+        </button>
+        <div class="accordion-body" id="panel-4">
+          <div class="accordion-inner">
+            <div class="accordion-content">
+              <p>
+                Alongside my professional experience, I'm continuing to develop my knowledge through formal business management education.
+              </p>
+
+              <div class="education-item">
+                <div class="edu-icon">🎓</div>
+                <div>
+                  <h3>Bachelor's Degree, Business Management</h3>
+                  <div class="institution">National College of Ireland</div>
+                  <div class="date">August 2025 – June 2027 · In progress</div>
+                </div>
+              </div>
+
+              <div class="education-item">
+                <div class="edu-icon">📚</div>
+                <div>
+                  <h3>Higher National Diploma, Business Management</h3>
+                  <div class="institution">Australian Institute of Management</div>
+                  <div class="date">2014 – 2016</div>
+                </div>
+              </div>
+
+              <p style="margin-top:20px">
+                My approach to development combines academic learning with real-world experience in operations, HR and business leadership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05 -->
+
+      <section class="accordion" id="section-5">
+        <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="panel-5">
+          <span class="number">05</span>
+          <span class="accordion-title">My Approach</span>
+          <span class="toggle-symbol" aria-hidden="true">−</span>
+        </button>
+        <div class="accordion-body" id="panel-5">
+          <div class="accordion-inner">
+            <div class="accordion-content">
+              <p>
+                I believe good operations and effective people management go hand in hand. For me, it's about understanding challenges, communicating clearly and making things work better.
+              </p>
+
+              <div class="quote">
+                "Empowering employees and improving everyday practices through effective communication and organisation."
+              </div>
+
+              <p>
+                Whether I'm working through a business challenge, supporting a team or reviewing a process, I enjoy finding solutions that make a practical difference.
+              </p>
+
+              <div class="values">
+                <div class="value"><span>✓</span> Empowering people</div>
+                <div class="value"><span>✓</span> Clear communication</div>
+                <div class="value"><span>✓</span> Practical solutions</div>
+                <div class="value"><span>✓</span> Continuous improvement</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CLOSING CTA -->
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="section-kicker">Let's connect</div>
+      <h2>People first.<br>Progress always.</h2>
+      <p>
+        Thanks for taking the time to explore my professional journey. I'm always happy to connect with people who share an interest in operations, business and making work better.
+      </p>
+
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/rachel-savage-7836bab7/" target="_blank" rel="noopener noreferrer">
+        Connect with me on LinkedIn
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 17L17 7M7 7h10v10"></path>
+        </svg>
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Rachel Savage</span>
+      <span>Built with the AI Badge</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // CURRENT YEAR
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+      // THEME TOGGLE
+      const themeToggle = document.getElementById("themeToggle");
+
+      themeToggle.addEventListener("click", function () {
+        const isLight =
+          document.documentElement.classList.toggle("light");
+
+        try {
+          localStorage.setItem(
+            "rachel-theme",
+            isLight ? "light" : "dark"
+          );
+        } catch (error) {
+          // The toggle still works without persistent storage.
+        }
+      });
+
+      // COLLAPSIBLE SECTIONS
+      const accordions = Array.from(
+        document.querySelectorAll(".accordion")
+      );
+
+      const expandToggle =
+        document.getElementById("expandToggle");
+
+      function setAccordion(accordion, open) {
+        const button =
+          accordion.querySelector(".accordion-trigger");
+
+        const symbol =
+          accordion.querySelector(".toggle-symbol");
+
+        accordion.classList.toggle("closed", !open);
+        button.setAttribute("aria-expanded", String(open));
+        symbol.textContent = open ? "−" : "+";
+      }
+
+      function updateExpandButton() {
+        const allOpen = accordions.every(
+          accordion => !accordion.classList.contains("closed")
+        );
+
+        const label = allOpen
+          ? "Collapse all sections"
+          : "Expand all sections";
+
+        expandToggle.title = label;
+        expandToggle.setAttribute("aria-label", label);
+      }
+
+      accordions.forEach(function (accordion) {
+        const trigger =
+          accordion.querySelector(".accordion-trigger");
+
+        trigger.addEventListener("click", function () {
+          const isClosed =
+            accordion.classList.contains("closed");
+
+          setAccordion(accordion, isClosed);
+          updateExpandButton();
+        });
+      });
+
+      expandToggle.addEventListener("click", function () {
+        const allOpen = accordions.every(
+          accordion => !accordion.classList.contains("closed")
+        );
+
+        accordions.forEach(function (accordion) {
+          setAccordion(accordion, !allOpen);
+        });
+
+        updateExpandButton();
+      });
+
+      // OPEN THE FIRST SECTION WHEN FOLLOWING THE HERO CTA
+      const exploreLink =
+        document.querySelector('a[href="#about"]');
+
+      exploreLink.addEventListener("click", function () {
+        setAccordion(accordions[0], true);
+        updateExpandButton();
+      });
+
+      updateExpandButton();
+    })();
+  </script>
+</body>
+</html>
